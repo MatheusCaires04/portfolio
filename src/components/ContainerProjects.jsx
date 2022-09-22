@@ -6,7 +6,7 @@ import { BsArrowsFullscreen, BsGithub } from "react-icons/bs";
 
 const ContainerProjects = () => {
   return (
-    <div className="max-w-[1000px] mx-auto mt-0 md:mt-6 grid grid-col-1 md:grid-cols-2 px-6 md:px-0 gap:4 md:gap-8 justify-items-center">
+    <div className="max-w-[1000px] mx-auto mt-0 md:mt-6 grid grid-col-1 md:grid-cols-2 px-6 md:px-0 gap-4 md:gap-8 justify-items-center">
       {DataProjects.map((index) => {
         return (
           <li key={index.id} className="w-full md:w-[95%] ">
