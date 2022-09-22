@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&family=Permanent+Marker&family=Poppins:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  list-style: none;
+}
+
+@layer base {
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #082032;
+  }
+}
