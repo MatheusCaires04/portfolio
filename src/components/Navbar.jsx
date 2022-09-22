@@ -60,22 +60,34 @@ const Navbar = () => {
         >
           <ul className="flex flex-col items-center gap-4 w-full text-center text-xl">
             <Link href="/">
-              <li className="border-[3px] border-l-[10px] border-orangeLight w-[80%] py-2 cursor-pointer">
+              <li
+                onClick={handleNavMobile}
+                className="border-[3px] border-l-[10px] border-orangeLight w-[80%] py-2 cursor-pointer"
+              >
                 Home
               </li>
             </Link>
-            <Link href="/">
-              <li className="border-[3px] border-l-[10px] border-orangeLight w-[80%] py-2 cursor-pointer">
+            <Link href="/Project">
+              <li
+                onClick={handleNavMobile}
+                className="border-[3px] border-l-[10px] border-orangeLight w-[80%] py-2 cursor-pointer"
+              >
                 Projects
               </li>
             </Link>
             <Link href="/">
-              <li className="border-[3px] border-l-[10px] border-orangeLight w-[80%] py-2 cursor-pointer">
+              <li
+                onClick={handleNavMobile}
+                className="border-[3px] border-l-[10px] border-orangeLight w-[80%] py-2 cursor-pointer"
+              >
                 Skills
               </li>
             </Link>
             <Link href="/">
-              <li className="border-[3px] border-l-[10px] border-orangeLight w-[80%] py-2 cursor-pointer">
+              <li
+                onClick={handleNavMobile}
+                className="border-[3px] border-l-[10px] border-orangeLight w-[80%] py-2 cursor-pointer"
+              >
                 Contact
               </li>
             </Link>
