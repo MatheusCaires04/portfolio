@@ -26,12 +26,12 @@ const Navbar = () => {
                 Projects
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/Skills">
               <li className="hover:text-orange-500 duration-100 cursor-pointer">
                 Skills
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/Contact">
               <li className="hover:text-orange-500 duration-100 cursor-pointer">
                 Contact
               </li>
@@ -75,7 +75,7 @@ const Navbar = () => {
                 Projects
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/Skills">
               <li
                 onClick={handleNavMobile}
                 className="border-[3px] border-l-[10px] border-orangeLight w-[80%] py-2 cursor-pointer"
@@ -83,7 +83,7 @@ const Navbar = () => {
                 Skills
               </li>
             </Link>
-            <Link href="/">
+            <Link href="/Contact">
               <li
                 onClick={handleNavMobile}
                 className="border-[3px] border-l-[10px] border-orangeLight w-[80%] py-2 cursor-pointer"
