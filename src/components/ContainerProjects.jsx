@@ -24,12 +24,12 @@ const ContainerProjects = () => {
                   Go to the website or Code on GitHub
                 </h3>
                 <div className="flex gap-4 py-8 flex-col md:flex-row">
-                  <Link href="/">
+                  <Link href={index.url} target="_blank">
                     <a className="flex items-center gap-2 px-8 py-2 bg-orangeLight rounded-full hover:bg-white hover:text-orangeLight duration-200 font-semibold tracking-wider">
                       Website <BsArrowsFullscreen />
                     </a>
                   </Link>
-                  <Link href="/">
+                  <Link href={index.git} target="_blank">
                     <a className="flex items-center gap-2 px-8 py-2 bg-orangeLight rounded-full hover:bg-white hover:text-orangeLight duration-200 font-semibold tracking-wider">
                       GitHub <BsGithub />
                     </a>

@@ -8,9 +8,28 @@
   list-style: none;
 }
 
+::-webkit-scrollbar {
+  width: 0.7rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dd6b4b;
+  border-radius: .7rem;
+}
+
 @layer base {
   body {
     font-family: "Poppins", sans-serif;
     background-color: #082032;
   }
+}
+
+.imageSkill {
+  background: url("../../public/assets/skills.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
 }

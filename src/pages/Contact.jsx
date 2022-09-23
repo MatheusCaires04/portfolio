@@ -1,11 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { FaGithub, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import {
+  FaGithub,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaRegWindowClose,
+} from "react-icons/fa";
 import { HiOutlineMail, HiOutlinePhone } from "react-icons/hi";
 
 import BannerPage from "./../components/BannerPage";
 
 const Contact = () => {
+  const [successMessage, setSuccessMessage] = useState(false);
+
+  const sendMessage = () => {
+    setSuccessMessage(!successMessage);
+  };
+
   return (
     <div className="mt-20">
       <BannerPage title="Contact" />
@@ -39,28 +51,70 @@ const Contact = () => {
             </div>
             <div className="mt-8 md:mt-0 flex flex-col items-center md:items-start ">
               <span className="mb-2 flex items-center gap-3">
-                <HiOutlineMail size={30} className='text-orangeLight' /> matheus-bini@hotmail.com
+                <HiOutlineMail size={30} className="text-orangeLight" />{" "}
+                matheus-bini@hotmail.com
               </span>
               <span className="flex items-center gap-3">
-                <HiOutlinePhone size={30} className='text-orangeLight' /> (18) 99645-3429
+                <HiOutlinePhone size={30} className="text-orangeLight" /> (18)
+                99645-3429
               </span>
             </div>
           </div>
-          <form className="flex flex-col items-center w-full px-10 gap-4 md:w-[50%] ">
+          <form
+            action="https://formsubmit.co/matheus-bini@hotmail.com"
+            method="POST"
+            className="flex flex-col items-center w-full px-10 gap-4 md:w-[50%] "
+          >
+            <input type="hidden" name="_captcha" value="false" />
+            <input
+              type="hidden"
+              name="_next"
+              value="http://localhost:3000/Contact"
+            />
             <input
               type="text"
+              name="name"
               placeholder="Enter your name..."
               className="w-full border-[3px] border-orangeLight rounded px-2 py-1 text-sm md:text-xl text-gray-700"
             />
-            <input type="email" placeholder="Enter your email..." className="w-full border-[3px] border-orangeLight rounded px-2 py-1 text-sm md:text-xl text-gray-700" />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email..."
+              className="w-full border-[3px] border-orangeLight rounded px-2 py-1 text-sm md:text-xl text-gray-700"
+            />
             <textarea
               name="message"
               id="message"
               placeholder="Message"
-              className='resize-none overflow-y-auto h-[120px] md:h-[150px] w-full border-[3px] border-orangeLight rounded px-2 py-1 text-sm md:text-xl text-gray-700'
+              className="resize-none overflow-y-auto h-[120px] md:h-[150px] w-full border-[3px] border-orangeLight rounded px-2 py-1 text-sm md:text-xl text-gray-700"
             ></textarea>
-            <input type="submit" value="Send" className='text-base md:text-xl border border-orangeLight rounded-full cursor-pointer text-orangeLight px-8 py-1 hover:bg-orangeLight hover:text-white duration-200' />
+            <input
+              type="submit"
+              value="Send"
+              className="text-base md:text-xl border border-orangeLight rounded-full cursor-pointer text-orangeLight px-8 py-1 hover:bg-orangeLight hover:text-white duration-200"
+              onClick={sendMessage}
+            />
           </form>
+        </div>
+      </div>
+      <div
+        className={
+          successMessage
+            ? "absolute top-0 left-0 w-full h-screen flex items-center justify-center bg-black/70"
+            : "hidden"
+        }
+      >
+        <div className="relative w-[80%] md:w-[50%] md:h-[30%] flex items-center justify-center px-8 py-4 bg-orangeLight border-[5px] border-white">
+          <FaRegWindowClose
+            color="white"
+            size={30}
+            className="cursor-pointer absolute top-4 right-4"
+            onClick={sendMessage}
+          />
+          <strong className=" text-white text-xl">
+            Your message was sent successfully. Thank you! &#9989;
+          </strong>
         </div>
       </div>
     </div>
