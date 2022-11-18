@@ -3,13 +3,15 @@ import React from "react";
 import SkillItem from "../components/SkillItem";
 import BannerPage from "./../components/BannerPage";
 
+import skill from "../../public/assets/skills.jpg";
+
 const Skills = () => {
   return (
     <div className="mt-20">
       <BannerPage title="SKILLS" />
       <div className="px-6 w-full">
-        <div className="flex flex-col max-w-[1100px] mx-auto ">
-          <div className="w-40 h-40 md:w-80 md:h-80 rounded-full border-[10px] border-orangeLight overflow-hidden bg-red-200 imageSkill self-center mb-4"></div>
+        <div className="flex flex-col max-w-[1100px] mx-auto items-center">
+          <div className="w-56 h-56 border-[10px] border-orangeLight rounded-full image__skill" />
           <div className="flex flex-col gap-3 items-center">
             <p className="text-white text-xl md:text-2xl text-center w-[90%] md:w-[70%] mx-auto ">
               I have learned a lot of skills as a frontend developer and I am

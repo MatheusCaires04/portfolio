@@ -18,7 +18,7 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: #dd6b4b;
-  border-radius: .7rem;
+  border-radius: 0.7rem;
 }
 
 @layer base {
@@ -28,8 +28,9 @@
   }
 }
 
-.imageSkill {
-  background: url("../../public/assets/skills.jpg") no-repeat;
+.image__skill {
+  background-image: url("../../public/assets/skills.jpg");
   background-size: cover;
   background-position: center;
+  margin-bottom: 30px;
 }
