@@ -41,4 +41,11 @@ export const DataProjects = [
     url: "https://weatherapi-xi.vercel.app/",
     git: "https://github.com/MatheusCaires04/weatherapi",
   },
+  {
+    id: 6,
+    image: "/assets/projeto7.png",
+    techs: "NextJS, TailwindCSS, Swiper Slide",
+    url: "https://food-website-green-six.vercel.app/",
+    git: "https://github.com/MatheusCaires04/portfolio",
+  },
 ];
